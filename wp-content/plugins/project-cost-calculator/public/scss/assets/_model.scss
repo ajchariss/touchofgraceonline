@@ -1,0 +1,345 @@
+
+/* Model */
+.pro_rate_cal_shortcode_main{
+  .pro_rate-cal_backdrop_model {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      background-color: rgba($black, 0.6);
+      z-index: 1000;
+  }
+  .pro_rate_cal_builder_popup_window{
+    box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.07);
+    position: relative;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $white;
+    background-clip: border-box;
+    border-radius: 0.475rem;
+    padding:0 18px 10px;
+    max-width:500px;
+    width:90%;
+    position: relative;
+    .pro_rate_cal_model_header_gradient{
+      background: $blue-1;
+      background: -webkit-gradient(linear,left top,right top,from($blue-1),color-stop(37%,$blue-2),to($blue-3));
+      background: linear-gradient(to right,$blue-1 0,$blue-2 37%,$blue-3 100%);
+    }
+    .pro_rate_cal_builder_popup_window_header{
+      display: flex;
+      align-items: center;
+      margin-bottom:15px;
+      @extend .pro_rate_cal_model_header_gradient;
+      border-radius: 6px;
+      color: $white;
+      padding: 18px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: transparent;
+    // margin-top: -24px;
+      margin-right: -18px;
+      margin-left: -18px;
+      h4{
+        margin-bottom: 0;
+        color: $white;
+      }
+      .rate_cal_close_popup_button{
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        font-size: 24px;
+        font-weight: 400;
+        color: $white;
+        opacity: .9;
+        width: 28px;
+        height: 28px;
+        padding-bottom: 0;
+        padding-left: 1px;
+        text-align: center;
+        line-height: 28px;
+        cursor: pointer;
+        &:hover{
+          background: rgba($white,.2);
+          border-radius: 50%;
+          outline: 0;
+        }
+      }
+    }
+    form{
+      max-height: 800px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0 15px;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-bottom: 5px;
+      @media screen and ( min-width: 901px ) and ( max-height: 1050px )  {
+        max-height: 700px;
+      }
+      @media screen and ( min-width: 768px ) and ( max-height: 900px )  {
+        max-height: 500px;
+      }
+      @media screen and ( min-width: 601px ) and ( max-height: 767px )  {
+        max-height: 450px;
+      }
+      @media screen and ( min-width: 550px ) and ( max-height: 600px )  {
+        max-height: 340px;
+      }
+      &::-webkit-scrollbar {
+        background: $gray-2;
+        border-radius: 4px;
+        height: 5px;
+        width: 5px;
+      }
+        
+      &::-webkit-scrollbar-thumb {
+          background: $gray-4;
+          border-radius: 4px;
+      }
+      p.error_field {
+        margin-top: 0;
+        color: $red;
+      }
+      .pro_rate_cal_setting_fields{
+        margin-bottom: 15px;
+        width: 100%;
+        clear: both;
+        label{
+          display: block;
+          margin-bottom: 2px;
+          font-size: 14px;
+        }
+        select {
+          max-width: 100%;
+          vertical-align: middle;
+        }
+        .ui-sortable{ 
+          margin-top: 0;
+          li{
+            display: flex;
+            align-items: center;
+            @media (max-width: 575px){
+              flex-wrap: wrap;
+              border: 1px solid $gray-4;
+              padding: 10px 15px;
+              border-radius: 0.25rem;
+              position: relative;
+              padding-left: 35px;
+            }
+            .rate_cal_sortable_tab{
+              margin-right: 10px;
+              @media (max-width: 575px){
+                position: absolute;
+                left: -10px;
+                margin-top: -5px;
+              }
+            }
+            .rate_cal_button{
+              @media (max-width: 575px){
+                position: absolute;
+                top: 50%;
+                right: 0px;
+                transform: translateY(-50%);
+              }
+            }
+            input[type=checkbox], input[type=radio]{
+              @media (max-width: 575px){
+                position: absolute;
+                left: 15px;
+              }
+            }
+            input[type=text], input[type=number]{
+              flex: 1;
+              margin: 0 10px;
+              max-width: 150px;
+              @media (max-width: 575px){
+                margin: 5px 10px;
+                max-width: calc(100% - 50px);
+              }
+            }
+          }
+          + .rate_cal_button{
+            padding: 6px 12px;
+          }
+        }
+      }
+      .simple_input_setting_field{
+        width: 100% !important;
+      }
+      .pro_rate_cal_setting_action{
+        display: flex;
+        align-items:center;
+        button + button{
+          margin-left: 10px;
+        }
+      }
+      .pro_rate-cal_half {
+        width: 48% !important;
+        float: left;
+        clear: initial !important;
+        @media (max-width: 575px){
+          width: 100% !important;
+          float: none;
+        }
+        + .pro_rate-cal_half{
+          margin-left: 18px;
+          @media (max-width: 575px){
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+    
+  /* Custom Model  */
+  .pro_rate_cal_model{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    background-color: rgba($black, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    &.pro_rate_cal_model_open {
+      opacity: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: block;
+      visibility: visible;
+      pointer-events: all;
+      .pro_rate_cal_model_model_contain {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+      }
+    }
+    .pro_rate_cal_model_model_contain {
+      width: 95%;
+      max-width: 570px;
+      margin: 0 auto;
+      min-height: 100px;
+      background-color: $white;
+      margin-top: 100px;
+      margin-bottom: 30px;
+      opacity: 0;
+      -webkit-transform: translateY(-100px);
+      transform: translateY(-100px);
+      position: relative;
+      box-shadow: 0 5px 25px -5px rgba($black, 0.25);
+      border-radius: 6px;
+      &.pro_rate_cal_model_sm {
+        max-width: 470px;
+      }
+      &.pro_rate_cal_model_lg {
+        max-width: 1170px;
+      }
+      &.pro_rate_cal_model_xl {
+        max-width: 1270px;
+        .pro_rate_cal_model_header {
+          padding: 40px 50px 10px;
+        }
+        .pro_rate_cal_model_body {
+          padding: 0 50px 40px 50px;
+        }
+      }
+      &.pro_rate_cal_model_fullwidth {
+        max-width: 90%;
+      }
+      .pro_rate_cal_model_header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        @extend .pro_rate_cal_model_header_gradient;
+        border-radius: 6px;
+        color: $white;
+        padding: 18px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-color: transparent;
+        h2 {
+          display: inline-block;
+          text-transform: none;
+          margin: 0;
+          padding-top: 0;
+          margin-bottom: 0;
+          font-size: 18px;
+          color: $white;
+        }
+        p {
+          font-size: 14px;
+          color: $secondary-color;
+          margin: 0 auto;
+        }
+        .pro_rate_cal_model_icon_close,
+        .pro_rate_cal_model_close {
+          position: absolute;
+          top: 14px;
+          right: 18px;
+          font-size: 24px;
+          font-weight: 400;
+          color: $white;
+          opacity: .9;
+          width: 28px;
+          height: 28px;
+          padding-bottom: 0;
+          padding-left: 1px;
+          text-align: center;
+          line-height: 28px;
+          cursor: pointer;
+          &:hover{
+            background: rgba($white,.2);
+            border-radius: 50%;
+            outline: 0;
+          }
+          img {
+            display: inline-block;
+            margin: auto;
+            line-height: 28px;
+            vertical-align: middle;
+          }
+          &.out-side {
+            top: -45px;
+            right: -10px;
+          }
+        }
+        
+      }
+      .pro_rate_cal_model_model_body {
+        padding: 0 30px 30px 30px;
+        color: $secondary-color;
+        
+      }
+      &.no-pad{
+        .pro_rate_cal_model_header, .pro_rate_cal_model_model_body{
+          padding: 0;
+        }
+      }
+      .pro_rate_cal_model_action{
+        .rate_cal_button{
+          + .rate_cal_button{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+  
+  
+  
+  
+  
+  

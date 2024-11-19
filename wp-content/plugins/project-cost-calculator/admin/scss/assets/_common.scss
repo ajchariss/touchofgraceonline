@@ -1,0 +1,240 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body.toplevel_page_rate_calculator_main, body.cost-calculator_page_rate_calculator_categories, body.cost-calculator_page_rate_calculator_how_to_use, body.cost-calculator_page_rate_calculator_settings{
+  background-color: $gray-10;
+  #wpcontent {
+    padding-left: 0;
+  }
+}
+
+
+.pro_rate_cal_main_section{
+  margin-top: 10px;
+  font-family: $primary-font !important;
+  color: $secondary-color;
+  color: $secondary-color;
+  margin: 0 auto 0;
+  font-size: 14.5px;
+  overflow-x: hidden;
+  min-height: calc(100vh - 186px);
+  //height: calc(100vh - 98px);
+  h1, h2, h3, h4, h5, h6{
+    margin: 0 0 15px;
+    font-family: $primary-font;
+    color: $secondary-color;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  h1{
+    font-size: 36px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  h4{
+    font-size: 18px
+  }
+  h5{
+    font-size: 13px;
+  }
+  p, span, a, li, ol, ul{
+    font-family: $primary-font;
+    color: $secondary-color;
+  }
+  a{
+    color: $primary-color-main;
+    text-decoration: none !important;
+    outline: 0;
+    &:hover, &:focus, &:active{
+      color: $primary-color-dark;
+      text-decoration: none !important;
+      outline: 0;
+    }
+  }
+  
+  .dashicons{
+    font-family: dashicons;
+  }
+  .pro_rate_cal_table_responsive{
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  table{
+    clear: both;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    max-width: none;
+    border-collapse: separate;
+    width: 100%;
+    border-spacing: 0;
+    thead{
+      >tr{
+        >th {
+          border-top: 1px solid $gray-12;
+          border-right: 1px solid $gray-12;
+          padding: 10px;
+          color: $light-blue;
+          background: $gray-11;
+          vertical-align: middle;
+          border-bottom: 1px solid;
+          border-color: $gray-12;
+          font-size: 13px;
+          padding-top: 11px;
+          padding-bottom: 11px;
+          font-weight: 400;
+          text-align: left;
+          position: relative;
+          &:first-child {
+            border-left: 1px solid $gray-12;
+          }
+          &:last-child {
+            border-right: 1px solid $gray-12;
+          }
+        }
+      }
+    }
+    
+    > tbody , >tfoot{
+      >tr{
+        >td, >th {
+          padding: 10px;
+          font-size: 13px;
+          vertical-align: middle;
+          line-height: 1.42857143;
+          border-top: 1px solid $gray-12;
+        }
+      }
+    }
+    tbody {
+      tr{
+        &:first-child{
+          td {
+            border-top: 0;
+          }
+        }
+      }
+    }
+    td, th {
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+      a{
+        color: $primary-color-dark;
+        &:hover{
+          color:$secondary-color;
+        }
+      }
+    }
+  }
+  .notice, div.error, div.updated {
+    background: $white;
+    border: 1px solid $gray-3;
+    border-left-width: 4px;
+    margin: 0 0 10px;
+    padding: 1px 12px;
+    &.notice-info {
+      border-left-color: $primary-color-main;
+    }
+    &.notice-error, div.error {
+      border-left-color: $red;
+    }
+    &.notice-success, div.updated {
+      border-left-color: $green;
+    }
+  }
+  .pro_rate_cal_astric{
+    color: $red !important;
+  }
+  
+  .pro_rate_cal_valdation, .pro_rate_cal_field_error {
+    color: $red !important;
+    font-size: 12px;
+    margin: 0;
+    display: block;
+  }
+  
+}
+
+.pro_rate_footer_past{
+  position: fixed;
+  bottom: 0;
+  left: 160px;
+  right: 0;
+  padding: 10px 20px;
+  color: $gray-6;
+  background-color: $white;
+  z-index: 1;
+  box-shadow: 0px 5px 10px 3px rgba($black, 0.08);
+  p{
+    margin: 0;
+    color: $gray-6;
+    text-align: center;
+    font-size: 11px;
+    a{
+      color: $red;
+      text-decoration: none;
+      &:hover{
+        color: $secondary-color;
+      }
+    }
+  }
+}
+.folded .pro_rate_footer_past {
+  left: 36px;
+}
+@media only screen and (max-width: 960px){
+  .auto-fold .pro_rate_footer_past {
+    left: 36px;
+  }
+}
+@media screen and (max-width: 782px){
+  .auto-fold .pro_rate_footer_past {
+    left: 0;
+  }
+}
+.pro_rate_cal_field_error{
+  background-color: $pink !important;
+  border: 1px solid $red !important;
+  outline: none !important;
+}
+
+// Multiple select
+.selection{
+  i.icon.delete:before {
+    content: "\f335";
+    font-family: dashicons;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: never;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  
+}
+.ui.multiple.dropdown>.label {
+  box-shadow: none !important;
+  background-color: transparent;
+  opacity: 1;
+  font-weight: 400;
+  border: 1px solid $gray-3;
+}
+.ui.selection.active.dropdown .menu, .ui.selection.active.dropdown {
+  border-color: $gray-3  !important;
+  box-shadow: none !important;
+}

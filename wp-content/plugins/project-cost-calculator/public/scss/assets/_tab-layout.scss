@@ -1,0 +1,274 @@
+.pro_rate_cal_shortcode_main{
+    .pro_rate_cale_tab_view{
+        margin-top: 30px;
+        .pro_rate_tabs{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            .pro_rate-cal_tab{
+                padding: 10px 20px;
+                color: $secondary-color;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                border-radius: 0;
+                border-bottom: 1px solid $gray-3;
+                @at-root .pro_rate_cal_body_tab_view.fancy-layout &{
+                    border-radius: 10px;
+                    border-bottom: 0;
+                    padding-right: 40px;
+                }
+                span{
+                    color: $secondary-color;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    font-weight: 400;
+                }
+                &.pro_rate_tab_active{
+                    background-color: $secondary-color;
+                    color: $white;
+                    @at-root .pro_rate_cal_body_tab_view.fancy-layout &{
+                        background-color: $primary-color-main;
+                    }
+                    span{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .pro_rate_tab_drawer_heading{
+            display: none;
+            font-size: 22px;
+            color: $secondary-color;
+            font-weight: 500;
+            line-height: 1.1;
+            position: relative;
+            @media (max-width: 991px) {
+                font-size: 20px;
+            }
+            @media (max-width: 767px) {
+                font-size: 16px;
+            }
+            @media (max-width: 991px) {
+                display: block;
+                margin-bottom: 0 !important;
+                border-bottom: 1px solid $gray-3;
+                padding: 15px 20px;
+                padding-right: 40px;
+                @at-root .pro_rate_cal_body_tab_view.fancy-layout &{
+                    border: 1px solid $gray-3;
+                    border-radius: 10px;
+                    margin-bottom: 10px !important;
+                }
+                &:last-of-type{
+                    border-bottom: 0;
+                }
+                &:after {
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -3px;
+                    border-bottom: 2px solid rgba($primary-color-main, 1);
+                    border-right: 2px solid rgba($primary-color-main, 1);
+                    transform: rotate(45deg) translateY(-50%);
+                    transition: all .4s ease-in-out;
+                    transform-origin: 50% 0;
+                    @at-root .pro_rate_cal_body_tab_view.fancy-layout &{
+                        right: 20px;
+                        border-color: $primary-color-main;
+                    }
+                }
+            }
+            a{
+                text-decoration: none;
+                font-size: 22px;
+                color: $secondary-color;
+                font-weight: 500;
+                line-height: 1.1;
+                @media (max-width: 991px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+                &:hover, &:focus, &:active{
+                    color: $secondary-color;
+                }
+            }
+            &.pro_rate_tab_d_active{
+                display: block;
+                @media (max-width: 991px) {
+                    border-bottom: 0;
+                    &:after {
+                        transform: rotate(-135deg) translateY(-50%);
+                        margin-top: 3px;
+                        @at-root .pro_rate_cal_body_tab_view.fancy-layout &{
+                            border-color: $white;
+                        }
+                    }
+                    @at-root .pro_rate_cal_body_tab_view.fancy-layout &{
+                        background-color: $primary-color-main;
+                        color: $white;
+                        a{
+                            color: $white;
+                            &:hover, &:focus, &:active{
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pro_rate_tab_content{
+            @media (max-width: 991px) {
+                margin-bottom: 30px;
+            }
+        }
+        .pro_rate_tab_container, .pro_rate-cal_total_summary_block{
+            background-color: $white;
+            padding: 30px;
+            box-shadow: 0 0px 6px rgba($black, 0.16);
+            height: 100%;
+            border-radius: 10px;  
+            @media (max-width: 767px) {
+                padding: 20px;
+            } 
+        }
+        .pro_rate-cal_total_summary_block{
+            h3{
+                font-size: 22px;
+                color: $secondary-color;
+                font-weight: 500;
+                line-height: 1.1;
+                @media (max-width: 991px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                }
+            }
+            @at-root .pro_rate_cal_body_tab_view.fancy-layout &{
+                background-color: rgba($gray-1, 1); 
+                .pricing_table{
+                    display: block;
+                    background-color: transparent;
+                    thead{
+                        tr{
+                            margin-bottom: 5px;
+                            border-bottom: 0 !important;
+                            th{
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    tbody, thead{
+                        display: block;
+                        width: 100%;
+                        tr{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border: 0;
+                            padding: 0;
+                            background-color: transparent;
+                            border-bottom: 1px solid $gray-3;
+                            &:last-child{
+                                border-bottom:0;
+                            }
+                            &:empty{
+                                display: none;
+                            }
+                            th, td{
+                                border: 0;
+                                padding: 10px 0;
+                                background-color: transparent;
+                                &:first-child{
+                                    flex: 0 0 40%;
+                                    max-width: 40%;
+                                    text-align: left;
+                                }
+                                &:last-child{
+                                    flex: 1;
+                                    max-width: 60%;
+                                    text-align: right;
+                                    padding-left: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .pro_rate-cal_tab_left-col, .pro_rate-cal_tab_center-col, .pro_rate-cal_tab_right-col{
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px !important;
+            padding-left: 15px !important;
+        }
+        .pro_rate-cal_tab_left-col{
+            flex: 0 0 25%;
+            max-width: 25%;
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+        .pro_rate-cal_tab_center-col, .pro_rate-cal_tab_right-col{
+            flex: 0 0 37.5%;
+            max-width: 37.5%;
+            @media (max-width: 991px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        .pro_rate-cal_tab_center-col{
+            @media (max-width: 991px) {
+                margin-bottom: 30px;
+            }
+        }
+        .pro_rate-cal_step_table{
+            display: block;
+            width: 100%;
+            tbody{
+                display: block;
+                width: 100%;
+            }
+            tr{
+                display: flex;
+                flex-wrap: wrap;
+                border: 0;
+                padding: 0;
+                border: 1px solid $gray-3;
+                border-radius: 10px;
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 15px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                td{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    border: 0;
+                    padding: 0;
+                    margin-bottom: 20px;
+                    label{
+                        font-size: 14px;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    select{
+                        width: 100%;
+                    }
+                    @at-root .pro_rate_cal_body_tab_view &{
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+/* Button */
+.pro_rate_cal_shortcode_main{
+  .rate_cal_button{
+      font-weight: 400;
+      padding: 11px 20px;
+      position: relative;
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 16px;
+      border: 1px solid transparent;
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      transition: all .4s ease-in-out;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-family: $primary-font;
+      letter-spacing: 1px;
+      box-shadow: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+  }
+
+  .rate_cal_button_primary{
+    color: $white;
+    border-color:$primary-color-main;
+    background-color: $primary-color-main;
+    &:hover, &:active, &:focus{
+      color: $white;
+      border-color:$secondary-color;
+      background-color: $secondary-color;
+    }
+  }
+
+
+  .rate_cal_button_primary_border{
+    color: $primary-color-main !important;
+    border-color:$primary-color-main !important;
+    background-color: transparent !important;
+    &:hover, &:active, &:focus{
+      color: $white !important;
+      border-color:$secondary-color !important;
+      background-color: $secondary-color !important;
+    }
+  }
+
+
+  .rate_cal_icon_button_primary_border{
+    color: $primary-color-main !important;
+    border-color:$primary-color-main !important;
+    background-color: transparent !important;
+    padding: 9px 10px;
+    &:hover, &:active, &:focus{
+      color: $white !important;
+      border-color:$secondary-color !important;
+      background-color: $secondary-color !important;
+    }
+  }
+
+
+  .rate_cal_icon_transparent_button{
+    color: $secondary-color !important;
+    border-color:transparent !important;
+    background-color: transparent !important;
+    padding: 6px 8px;
+    border-radius: 6px;
+    &:hover, &:active, &:focus{
+      color: $secondary-color !important;
+      border-color:transparent !important;
+      background-color: $gray-3 !important;
+    }
+  }
+}
+
+.rate_cal_link_button{
+  color: $secondary-color !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  svg, img, i{
+    display: inline-block;
+    vertical-align: middle;
+    color: $secondary-color !important;
+  }
+  svg{
+    fill: $secondary-color !important;
+  }
+  &:hover, &:active, &:focus{
+    color: $primary-color-main !important;
+    svg, i{
+      color: $primary-color-main !important;
+    }
+    svg{
+      fill: $primary-color-main !important;
+    }
+  }
+}

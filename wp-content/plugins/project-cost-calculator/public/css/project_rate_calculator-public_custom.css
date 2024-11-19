@@ -1,0 +1,18 @@
+.overflow_hide {
+    overflow: hidden;
+}
+.pro_rate_cal_field_lock{
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: opacity(0.5);
+}
+
+.pro_rate_cal_item-pagination li {
+    cursor: pointer;
+}
+.default-layout .pro_step_tabs_section .pro_step_tabs_part li::before {
+    content: none;
+}
+
+
+

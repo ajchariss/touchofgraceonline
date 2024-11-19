@@ -1,0 +1,36 @@
+
+//$primary-color: #415165;
+$primary-color-main: #03a9f4;
+$secondary-color: #323a45;
+
+:root {
+    --primary-color-main: #{$primary-color-main};
+    --secondary-color: #{$secondary-color};
+}
+
+$white:    #fff !default;
+$gray-1: #f8f9fa !default;
+$gray-2: #e9ecef !default;
+$gray-3: #eeeeee !default;
+$gray-4: #ced4da !default;
+$gray-5: #adb5bd !default;
+$gray-6: #6c757d !default;
+$gray-7: #495057 !default;
+$gray-8: #343a40 !default;
+$gray-9: #212529 !default;
+$gray-10: #e3e8ee !default;
+///
+$gray-11: #f6f8fa;
+$gray-12: #f0f0f0;
+$black:    #000 !default;
+$blue: $primary-color-main;
+$blue-1: #226faa;
+$blue-2: #2989d8;
+$blue-3: #72c0d3;
+$red: #d63638;
+$light-blue: #4e75ad;
+$green: #00a32a;
+
+
+//Font 
+$primary-font: 'Roboto', sans-serif;

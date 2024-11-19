@@ -1,0 +1,60 @@
+
+.pro_rate_cal_shortcode_main{
+    .pro_rate-cal_card{
+        position: relative;
+        background-color: $white;
+        border: 1px solid $gray-3;
+        box-shadow: 0 1px 15px 1px rgba(90, 90, 90, 0.08);
+        margin-bottom: 25px;
+        border-radius: 4px;
+        .pro_rate-cal_card_header{
+            h1, h2, h3, h4, h5, p{
+                margin: 0 !important;
+            }
+        }
+        &.pro_rate-cal_card-no-bg{
+            background-color: transparent;
+        }
+    }
+    .pro_rate-cal_card_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: transparent;
+        padding: 15px;
+        border-bottom: 1px solid $gray-3;
+        p{
+            margin: 0;
+            font-size: 14px;
+        }
+        &.rate-cal_no-pad {
+            padding: 0 0 10px;
+        }
+    }
+    .pro_rate-cal_card-body {
+        background: $white;
+        border-radius: 4px;
+        padding: 15px;
+        position: relative;
+    }
+    .pro_rate-cal_card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: transparent;
+        padding: 15px;
+        border-top: 1px solid $gray-3;
+        p{
+            margin: 0;
+            font-size: 14px;
+        }
+        &.rate-cal_no-pad {
+            padding: 0 0 10px;
+        }
+    }
+    .rate-cal_no-pad{
+        padding: 0;
+    }
+}

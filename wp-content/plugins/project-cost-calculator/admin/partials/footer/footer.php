@@ -1,0 +1,3 @@
+<div class="pro_rate_footer_past">
+    <p><?php printf(" %s <a href='https://unlimitedwp.com/' target='_blank'> UnlimitedWP</a>, %s",__("Project Cost Calculator powered by", "project-cost-calculator"),__("a Whitelabel WordPress Development Agency. Development starts at USD $497 flat monthly fee. Site Maintenance starts at only USD $47 per site per month.", "project-cost-calculator")); ?></p>
+</div>

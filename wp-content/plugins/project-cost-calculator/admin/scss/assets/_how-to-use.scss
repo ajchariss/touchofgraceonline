@@ -1,0 +1,20 @@
+.how-to-use-content{
+    ol, ul, p, span, a{
+        font-size: 16px;
+    }
+    ol{
+        margin-left: 20px;
+    }
+    ol, ul{
+        li{
+            margin-bottom: 20px;
+            ul, ol{
+                margin-top: 20px;
+            }
+            ul{
+                list-style: inside;
+                list-style-type: circle;
+            }
+        }
+    }
+}

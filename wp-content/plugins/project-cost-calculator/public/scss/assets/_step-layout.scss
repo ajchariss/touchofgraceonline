@@ -1,0 +1,501 @@
+.pro_rate_cal_shortcode_main{
+    .pro_rate_cal_step_main{
+        table{
+            border: 0;
+            margin: 0;
+            hr{
+                margin: 0 !important;
+                background: none !important;
+                background-color: transparent !important;
+                height: auto !important;
+                &::after, &::before{
+                    content: none !important;
+                }
+            }
+            thead{
+                >tr{
+                    >th{
+                        &:nth-child(2){
+                            min-width: 100px;
+                        }
+                        &:last-child{
+                            min-width: 150px;
+                        }
+                    }
+                }
+            }     
+        }
+        .pro_rate_cal_step_data{
+            .pro_rate_cal_step_data_list{
+                display: flex;
+                align-items: center;
+                border: 1px solid $gray-3;
+                margin-bottom: 15px;
+                border-radius: 4px;
+                padding: 10px 20px;
+                box-shadow: 0px 2px 8px 0px rgba($black, 0.08);
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .pro_rate_cal_step_data_list_title{
+                    max-width: 30%;
+                    flex: 0 0 30%;
+                    @media (max-width:767px) {
+                        max-width: 100%;
+                        flex: 0 0 100%;
+                    }
+                    p, span, h4, h5, h6{
+                        margin: 0;
+                        font-weight: 600;
+                    }
+                }
+                .pro_rate_cal_step_data_list_content{
+                    max-width: 70%;
+                    flex: 0 0 70%;
+                    @media (max-width:767px) {
+                        max-width: 100%;
+                        flex: 0 0 100%;
+                    }
+                    p, span, h4, h5, h6{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .pro_rate-cal_step_card{
+            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                background-color: $white;
+                border: 1px solid $gray-4;
+                padding: 30px;
+                border-radius: 5px;
+                @media (max-width: 575px){
+                    padding: 15px;
+                }
+            }
+            .pro_rate-cal_step_card_header{
+                text-align: center;
+                margin-bottom: 50px;
+                h2{
+                    font-size: 36px;
+                    margin: 0 0 20px;
+                }
+                p{
+                    margin: 0;
+                }
+                &:empty{
+                    display: none;
+                }
+            }
+            .pro_rate-cal_step_card-body{
+                table.pro_rate-cal_step_table{
+                    tbody{
+                        tr{
+                            display: flex;
+                            align-items: center;
+                            border: 1px solid $gray-3;
+                            margin-bottom: 15px;
+                            border-radius: 4px;
+                            padding: 10px 20px;
+                            box-shadow: 0px 2px 8px 0px rgba($black, 0.08);
+                            background: $white;
+                            background-color: $white;
+                            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                                border: 0;
+                                box-shadow: 0px 3px 6px rgba($black, 0.16);
+                                padding: 30px;
+                                margin-bottom: 20px;
+                                border-radius: 10px;
+                                flex-wrap: wrap;
+                                @media (max-width: 575px){
+                                    padding: 20px;
+                                }
+                            }
+                            @media (max-width:767px) {
+                                flex-wrap: wrap;
+                            }
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            th, td{
+                                background-color: $white;
+                            }
+                            td{
+                                border: 0;
+                                padding: 0;
+                                &:first-child{
+                                    max-width: 30%;
+                                    flex: 0 0 30%;
+                                    padding-right: 15px;
+                                    @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                                        max-width: 100%;
+                                        flex: 0 0 100%;
+                                        padding-right: 0;
+                                        margin-bottom: 30px;
+                                        @media (max-width: 575px){
+                                            margin-bottom: 15px;
+                                        }
+                                        p, span, h4, h5, h6{
+                                            margin: 0;
+                                            font-weight: 600;
+                                        }
+                                        label{
+                                            font-size: 22px;
+                                            line-height: 1.5;
+                                            font-weight: bold;
+                                            @media (max-width: 575px){
+                                                font-size: 20px;
+                                            }
+                                            .rate_cal_tooltip{
+                                                vertical-align: super;
+                                            }
+                                        }
+                                    }
+                                    @media (max-width:767px) {
+                                        max-width: 100%;
+                                        flex: 0 0 100%;
+                                        margin-bottom: 15px;
+                                        padding-right: 0;
+                                    }
+                                    
+                                    p, span, h4, h5, h6{
+                                        margin: 0;
+                                        font-weight: 600;
+                                    }
+                                }
+                                &:last-child{
+                                    max-width: 70%;
+                                    flex: 0 0 70%;
+                                    @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                                        max-width: 100%;
+                                        flex: 0 0 100%;
+                                    }
+                                    @media (max-width:767px) {
+                                        max-width: 100%;
+                                        flex: 0 0 100%;
+                                    }
+                                    p, span, h4, h5, h6{
+                                        margin: 0;
+                                    }
+                                }
+                                &:only-of-type{
+                                    max-width: 100%;
+                                    flex: 0 0 100%;
+                                    margin-bottom: 0 !important;
+                                    @media (max-width:767px) {
+                                        margin-bottom: 0;
+                                        padding-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pro_rate_cal_progress_bar_main{
+        .rate_cal_link_button{
+            &.previous_row {
+                img, svg, i{
+                    padding-right: 8px;
+                }
+            }
+            &.next_row {
+                img, svg, i{
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+    .pro_rate_cal_step_submit_btn_block{
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
+
+.pro_rate-cal_step_category_slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: none;
+    .pro_rate-cal_step_prev_category, .pro_rate-cal_step_next_category{
+        position: absolute;
+        width: 25%;
+        display: flex;
+        //cursor: pointer;
+        span{
+            font-size: 20px;
+            line-height: 28px;
+            color: $gray-4;
+            vertical-align: top;
+        }
+        p{
+            max-width: calc(90% - 20px);
+            width: 100%;
+            overflow: hidden;
+            height: 30px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin: 0;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 500;
+            color: $gray-4;
+        }
+    }
+    .pro_rate-cal_step_prev_category{
+        left: 0;
+        text-align: left;
+        span{
+            margin-right: 5px;
+        }
+    }
+    .pro_rate-cal_step_next_category{
+        right: 0;
+        text-align: right;
+        span{
+            margin-left: 5px;
+        }
+    }
+    .pro_rate-cal_step_active_category{
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 600;
+        color: $secondary-color;
+        max-width: 40%;
+    }
+}
+
+.pro_step_tabs_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+    @media (max-width: 767px){
+        margin-bottom: 20px;  
+    }
+    @at-root .fancy-layout &{
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 15px;
+            background: -moz-linear-gradient(left,  rgba($black,0) 0%, rgba($white,1) 66%, rgba($white,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left,  rgba($black,0) 0%,rgba($white,1) 66%,rgba($white,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right,  rgba($black,0) 0%,rgba($white,1) 66%,rgba($white,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            bottom: -10px;
+            z-index: 1;
+        }
+        &::after{
+            right: 0;
+        }
+        &::before{left:  0;
+            transform: rotate(-180deg);
+        }
+    }
+    .pro_step_tabs_part{
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+        list-style: none;
+        position: relative;
+        border-bottom: 1px solid $gray-4;
+        @at-root .fancy-layout &{
+            border-bottom: 0;
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -4px;
+                height: 3px;
+                width: 100%;
+                background-color: $gray-3;
+            }
+        }
+        li{
+            padding: 15px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            position: relative;
+            text-align: center;
+            z-index: 1;
+            @at-root .fancy-layout &{
+                padding: 10px 30px;
+                background-color: $white;
+                border-radius: 0;
+                flex: 1;
+                @media (max-width: 767px){
+                    padding: 5px 15px;   
+                }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                right: 100%;
+                bottom: 0;
+                background: rgba($secondary-color, 1);
+                height: 2px;
+                transition-property: right;
+                transition-duration: .3s;
+                transition-timing-function: ease-out;
+                @at-root .fancy-layout &{
+                    height: 3px;
+                    bottom: -4px;
+                    background: rgba($primary-color-main, 1);
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                right: 100%;
+                bottom: -7.5px;
+                width: 0;
+                height: 0;
+                border-width: 5px 0 5px 5px;
+                border-color: transparent transparent transparent rgba($primary-color-main, 1);
+                border-style: solid;
+                z-index: 2;
+                transition-property: right;
+                transition-duration: .3s;
+                transition-timing-function: ease-out;
+                visibility: hidden;
+                opacity: 0;
+            }
+            &.active{
+                &::after{
+                    right: 0;
+                }
+                &::before{
+                    right: -1px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+                @at-root .fancy-layout &{
+                    background-color: transparent;
+                    border-color: transparent;
+                    color: $primary-color-main;
+                }
+                p{
+                    @at-root .fancy-layout &{
+                        color: $primary-color-main;
+                    }
+                }
+            }
+            p{
+                margin: 0 !important;
+                color: $secondary-color;
+                transition: all 0.4s ease-in-out;
+                font-size: 16px;
+                @media (max-width: 767px){
+                    font-size: 14px;
+                }
+            }
+            @media (max-width: 991px) {
+                display: none !important;
+                &.active{
+                    display: inline-block !important;
+                }
+            }
+            
+        }
+    }
+    
+    .pro_rate_cal_custom_pagination {
+        position: relative;
+        padding: 0 20px;
+        width: 100%;
+        @at-root .fancy-layout &{
+            padding: 0 40px;
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -4px;
+                height: 3px;
+                width: 100%;
+                background-color: $gray-3;
+            }
+        }
+        
+    }
+    .pro_rate_cal_item-pagination{
+        .page-count, .total-page-count{
+            display: none;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none; 
+            li{
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-top: -3px;
+                overflow: hidden;
+                z-index: 2;
+                @at-root .fancy-layout &{
+                    top: auto;
+                    bottom: -20px;
+                    transform: none;
+                    margin-top: 0;
+                }
+                a{
+                    display: block;
+                }
+                span{
+                    display: inline-block;
+                    @at-root .fancy-layout &{
+                        display: none;
+                    }
+                }
+                svg{
+                    display: none;
+                    @at-root .fancy-layout &{
+                        display: inline-block;
+                        position: relative;
+                        z-index: 1;
+                        fill: $gray-4;
+                    }
+                }
+                &.pro_rate_cal_prev{
+                    left: 0;
+                    svg{
+                        @at-root .fancy-layout &{
+                            margin-left: -8px;
+                        }
+                    }
+                    @at-root .fancy-layout &{
+                        bottom: -17px;
+                    }
+                }
+                &.pro_rate_cal_next{
+                    right: 0;
+                    svg{
+                        @at-root .fancy-layout &{
+                            margin-right: -8px;
+                        }
+                    }
+                }
+                &.pagi-disabled {
+                    opacity: 0.4;
+                    pointer-events: none;
+                 }
+            }
+        }
+    }
+}

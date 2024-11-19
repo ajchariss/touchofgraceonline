@@ -1,0 +1,8 @@
+[10-Aug-2024 03:06:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/webavene/public_html/wp-content/plugins/hello.php:69
+Stack trace:
+#0 {main}
+  thrown in /home/webavene/public_html/wp-content/plugins/hello.php on line 69
+[28-Aug-2024 10:30:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home/webavene/public_html/wp-content/plugins/hello.php:69
+Stack trace:
+#0 {main}
+  thrown in /home/webavene/public_html/wp-content/plugins/hello.php on line 69

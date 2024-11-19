@@ -1,0 +1,44 @@
+.pro_rate_cal_main_section{ 
+ .rate_cal_tooltip {
+    position: relative;
+    display: inline-block;
+    .rate_cal_tooltiptext {
+      visibility: hidden;
+      width: 150px;
+      background-color: $secondary-color;
+      color: $white;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 10px;
+      position: absolute;
+      z-index: 1000;
+      bottom: -34px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity .3s;
+      font-size: 12px;
+      line-height: 17px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color:  transparent transparent $secondary-color transparent;
+      }
+    }
+    &:hover{
+      .rate_cal_tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    } 
+  }
+
+  .pro_rate_cal_tooltip-label{
+      cursor: pointer;
+  }
+}

@@ -1,0 +1,305 @@
+
+/* Data table */
+body{
+  .pro_rate_cal_main_section{ 
+    .dataTables_wrapper{
+      table{
+        &.dataTable{
+          &.dtr-inline.collapsed {
+            tbody {
+              td, th{
+                &:first-child{
+                  &:before {
+                    line-height: 16px;
+                    background-color: $gray-5;
+                    top: 50%;
+                    transform: translateY(-50%);
+                  }
+                }
+              }
+            }
+          }
+          tr{
+            &.child{
+                > td{
+                  &.child{
+                    .dtr-details{
+                      width: 100%;
+                      li{
+                        display: flex;
+                        flex-direction: column;
+                        .dtr-title{
+                          margin-bottom: 5px;
+                        }
+                      }
+                    }
+                  }
+                }
+            }
+          }
+        }
+      }
+      .dataTables_filter, .dataTables_length{
+        margin-bottom: 10px;
+        margin-top: 0;
+      }
+      .dataTables_length {
+        float: left;
+        margin-right: 5px;
+        label{
+          color: #2d2d2d;
+          font-weight: 400;
+          text-align: left;
+          white-space: nowrap;
+          font-size: 13px;
+          margin-bottom: 7px
+        }
+        select{
+          min-width: 60px;
+          padding: 5px 10px;
+          border-radius: 6px;
+          width: auto;
+          color: #4e75ad;
+          display: inline-block;
+          border: 1px solid #bfcbd9;
+          box-shadow: none;
+          font-size: 14px;
+          height: 30px;
+          min-height: 30px !important;
+          background-color: #fff;
+          border-radius: 3px;
+          padding: 5px 10px;
+          &:focus{
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            outline: 0 none;
+            border-color: $primary-color-main;
+          }
+        }
+      }
+      .dataTables_filter{ 
+        @media screen and (max-width: 640px){
+          float: right;
+        }
+        label{
+          position: relative;
+          display: flex;
+          align-items: center;
+          .dashicons-search{
+            padding: 6px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1;
+            text-align: center;
+            border-radius: 4px;
+            white-space: nowrap;
+            vertical-align: middle;
+            border: 1px solid #bfcbd9;
+            background-color: #fbfdff;
+            color: #97a8be;
+            border-right: 0;
+            height: 30px;
+            width: 30px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        input {
+          border-radius: 6px;
+          margin-left: 0;
+          height: 30px;
+          min-height: 30px !important;
+          width: 80px;
+          padding: 5px 10px;
+          border-radius: 3px;
+          transition: width .3s ease;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border: 1px solid #bfcbd9;
+          &:focus{
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            outline: 0 none;
+            border-color: $primary-color-main;
+            width: 160px!important;
+          }
+        }
+      }
+      .dataTables_paginate{
+        margin: 20px 2px 0 2px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .paginate_button{
+          font-weight: 400;
+          padding: 8px 12px;
+          position: relative;
+          border-radius: 0;
+          font-size: 14px !important;
+          line-height: 1;
+          border: 1px solid transparent;
+          display: inline-block;
+          text-align: center;
+          vertical-align: middle;
+          transition: all .4s ease-in-out;
+          text-decoration: none;
+          color: $secondary-color !important;
+          border-color:$gray-3 !important;
+          background-color: transparent !important;
+          @media screen and (max-width: 575px){
+            font-size: 11px !important;
+          }
+          margin: 0;
+          &:hover, &:active, &:focus{
+            background: none !important;
+            color: $secondary-color !important;
+            border-color:$gray-3 !important;
+            background-color: $gray-3 !important;
+
+          
+          }
+          &.current{
+            background: none !important;
+            color: $white !important;
+            border-color:$primary-color-main !important;
+            background-color: $primary-color-main !important;
+            &:hover{
+              color: $white !important;
+              border-color:$primary-color-dark !important;
+              background-color: $primary-color-dark !important;
+            }
+          }
+          &.disabled{
+            opacity: 1;
+            cursor: no-drop;
+            &:hover{
+              color: $secondary-color !important;
+              border-color:$gray-3 !important;
+              background-color: transparent !important;
+            }
+          }
+          &.previous{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-color: $gray-2 !important;
+            color: $secondary-color !important;
+            background-color: $white;
+            &:hover{
+              color: $secondary-color;
+              background-color: $gray-2;
+              border-color: $gray-2;
+            }
+          }
+          &.next {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-color: #ddd !important;
+            color: #777 !important;
+            background-color: #fff;
+            &:hover{
+              color: $secondary-color;
+              background-color: $gray-2;
+              border-color: $gray-2;
+            }
+          }
+        }
+      }
+      table.dataTable {
+        clear: both;
+        margin-top: 6px!important;
+        margin-bottom: 6px!important;
+        max-width: none!important;
+        border-collapse: separate!important;
+        thead{
+          >tr{
+            >th {
+              border-top: 1px solid #f0f0f0!important;
+              border-right: 1px solid #f0f0f0;
+              padding: 10px;
+              color: #4e75ad;
+              background: #f6f8fa;
+              vertical-align: middle;
+              border-bottom: 1px solid;
+              border-color: #ebf5ff!important;
+              font-size: 13px;
+              padding-top: 11px;
+              padding-bottom: 11px;
+              font-weight: 400;
+              text-align: left;
+              position: relative;
+              &:first-child {
+                border-left: 1px solid #dcdcdc;
+                &::after{
+                  content: none;
+                }
+              }
+              &:last-child {
+                border-right: 1px solid #dcdcdc;
+              }
+              &::after{
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                display: block;
+                content: '';
+                opacity: .09;
+                background-image: url(../images/sorting.svg);
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                background-size: contain;
+              }
+            }
+          }
+        }
+        > tbody , >tfoot, >thead{
+          >tr{
+            >td, >th {
+              line-height: 1.42857143;
+              vertical-align: middle;
+              border-top: 1px solid #ebf5ff;
+            }
+          }
+        }
+        > tbody , >tfoot{
+          >tr{
+            >td, >th {
+              padding: 10px 10px 10px 10px;
+              font-size: 13px;
+              @media (max-width: 767px){
+                padding: 15px 10px 15px 10px;
+              }
+            }
+          }
+        }
+        tbody {
+          tr{
+            &:first-child{
+              td {
+                border-top: 0;
+              }
+            }
+          }
+        }
+        td, th {
+          -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+          a{
+            color: $primary-color-dark;
+            &:hover{
+              color:#004b6d;
+            }
+          }
+        }
+        &.no-footer {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}

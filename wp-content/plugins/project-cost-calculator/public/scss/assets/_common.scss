@@ -1,0 +1,348 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.pro_rate_cal_body_classic_view,
+.pro_rate_cal_body_step_view,
+.pro_rate_cal_body_tab_view{
+  .pro_rate_cal_shortcode_main{
+    h1, h2, h3, h4, h5, h6{
+      font-family: $primary-font;
+    }
+    p, span, a, li, ol, ul, label, table, tr, td, th, div, strong, section, article, aside, figcaption, caption, nav, legend, output, summary, pre, abbr, address, i, dt, dd, b, blockquote, sub, sup, small, samp, mark{
+      font-family: $primary-font;
+    }
+  }
+}
+.pro_rate_cal_shortcode_main{
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: $primary-font;
+    color: $secondary-color;
+    margin: 0 auto 0;
+    font-size: 14px;
+    background-color: $white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    h1, h2, h3, h4, h5, h6{
+      margin: 0 0 15px !important;
+      font-family: $primary-font;
+      color: $secondary-color;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    h1{
+      font-size: 36px;
+    }
+    h2{
+      font-size: 30px;
+    }
+    h3{
+      font-size: 24px;
+    }
+    h4{
+      font-size: 18px
+    }
+    h5{
+      font-size: 14px;
+    }
+    p, span, a, li, ol, ul, label, table, tr, td, th, div, strong, section, article, aside, figcaption, caption, nav, legend, output, summary, pre, abbr, address, i, dt, dd, b, blockquote, sub, sup, small, samp, mark{
+      font-family: $primary-font;
+      color: $secondary-color;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    a{
+      color: $primary-color-main;
+      text-decoration: none !important;
+      outline: 0;
+      box-shadow: none !important;
+      &:hover, &:focus, &:active{
+        color: $secondary-color;
+        text-decoration: none !important;
+        outline: 0;
+      }
+    }
+    
+    .dashicons{
+      font-family: dashicons !important;
+    }
+    form{
+        width: 100%;
+    }
+    .pro_rate_cal_astric{
+      color: $red;
+    }
+    .pro_rate_cal_table_responsive{
+      @media (max-width: 991px){
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+    }
+    table{
+      clear: both;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      max-width: none;
+      border-collapse: separate;
+      width: 100%;
+      border-spacing: 0;
+      overflow: inherit;
+      border: 0;
+      background-color: $white;
+      thead{
+        >tr{
+          >th {
+            border-top: 1px solid $gray-12;
+            border-right: 1px solid $gray-12;
+            padding: 10px;
+            color: $secondary-color;
+            background: $gray-11;
+            vertical-align: middle;
+            border-bottom: 1px solid;
+            border-color: $gray-12;
+            font-size: 14px;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            font-weight: 400;
+            text-align: left;
+            position: relative;
+            @at-root .fancy-layout &{
+              padding: 15px;
+            }
+            
+            &:first-child {
+              border-left: 1px solid $gray-12;
+            }
+            &:last-child {
+              border-right: 1px solid $gray-12;
+            }
+          }
+        }
+      }
+      > tbody , >tfoot, >thead{
+        >tr{
+          >td, >th {
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 1px solid $gray-12;
+          }
+        }
+      }
+      > tbody , >tfoot{
+        >tr{
+          >td, >th {
+            padding: 10px;
+            font-size: 14px;
+            vertical-align: middle;
+            @at-root .fancy-layout &{
+              padding: 15px;
+            }
+            label{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      tbody {
+        tr{
+          &:first-child{
+            td {
+              border-top: 0;
+            }
+          }
+          td, th{
+            text-align: left;
+          }
+          &.pro_rate_cal_front_field{
+            background-color: $white;
+            background: $white;
+          }
+        }
+      }
+      td, th {
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        border: 1px solid $gray-12;
+        a{
+          font-size: 14px;
+          color: $secondary-color;
+          &:hover{
+            color:$secondary-color;
+          }
+        }
+        label, p, span, div, a, li, ol, ul{
+          font-size: 14px;
+          font-weight: 400;
+          color:$secondary-color;
+        }
+      }
+      &.classic-table{
+        thead{
+          th{
+            white-space: nowrap;
+            @media (max-width: 991px){
+              min-width: 200px;
+            }
+          }
+        }
+      }
+    }
+    .table_data{
+      table{
+        hr{
+          margin: 0 !important;
+          background: none !important;
+          height: auto !important;
+          background-color: transparent !important;
+          max-width: 100%;
+          &::before, &::after{
+            content: none !important;
+          }
+        }
+      }
+    }
+    
+}
+
+
+.pro_rate_overflow_hide {
+  overflow: hidden !important;
+}
+
+
+///Sticky Form Start
+
+.pro_rate_cal_shortcode_main{
+  .pro_cale_sticky_form_overly{
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(34,34,34,.6);
+    transition: opacity .2s linear,visibility .1s,width 1s ease-in;
+    cursor: not-allowed;
+    &.active{
+      transition: opacity .5s ease,width 0s;
+      opacity: 1;
+      width: 100%;
+      visibility: visible;
+    }
+  } 
+  .sticky_form {
+    background-color: $white;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+    padding: 50px 0;
+    box-shadow: 0px 8px 12px 16px rgba(189, 189, 189, 0.25);;
+    max-height: 50vh;
+    overflow-y: auto;
+    z-index: 100;
+    @media (max-width: 767px){
+      max-height: 70vh;
+    }
+    &.active {
+      bottom: 0;
+    }
+    .sticky_form_container{
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      .pro_rate-cal_row{
+        justify-content: center;
+      }
+      @media (min-width: 768px){
+        .pro_rate-cal_sticky_col_md_1{
+          flex: 0 0 100%;
+          max-width: 500px
+        }
+        .pro_rate-cal_sticky_col_md_2{
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        .pro_rate-cal_sticky_col_md_3{
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+        }
+        .pro_rate-cal_sticky_col_md_4{
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        .pro_rate-cal_sticky_col_md_5{
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+          
+          &:nth-last-child(-n + 2){
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+          }
+        }
+        
+      }
+    }
+    h3{
+      text-align: center;
+      margin-bottom: 20px !important;
+    }
+    .pro_rate_cal_form_intro{
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 20px 0 30px;
+    }
+    .pro_rate_cal_form_validtionary_text{
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 30px 0 0;
+    }
+    .pro_rate_cal_form_fields{
+      position: relative;
+      margin-bottom: 20px;
+
+    }
+    input{
+      width: 100%;
+    }
+    .pro_rate_cal_sticky_submit{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input[type=submit]{
+        width: auto;
+        padding: 11px 70px;
+      }
+    }
+    .pro_rate_cal_valdation{
+      color: $red;
+      font-size: 12px;
+      margin: 0;
+      position: absolute;
+      display: block;
+    }
+  }
+}
+
+.pro_rate_cal_astric{
+  color: $red !important;
+}
+
+
+

@@ -1,0 +1,110 @@
+
+/* Data table */
+body{
+  .pro_rate_cal_shortcode_main{
+    .dataTables_wrapper{
+      .dataTables_filter, .dataTables_length{
+        margin-bottom: 15px;
+      }
+      .dataTables_length {
+        select{
+          min-width: 60px;
+          padding: 5px 10px;
+          border-radius: 6px;
+        }
+      }
+      .dataTables_filter{ 
+        input {
+          border-radius: 6px;
+          margin-left: 8px;
+        }
+      }
+      .dataTables_paginate{
+        margin-top:20px;
+        .paginate_button{
+          font-weight: 400;
+          padding: 8px 12px;
+          position: relative;
+          border-radius: 10px !important;
+          font-size: 14px !important;
+          line-height: 1;
+          border: 1px solid transparent;
+          display: inline-block;
+          text-align: center;
+          vertical-align: middle;
+          transition: all .4s ease-in-out;
+          text-decoration: none;
+          color: $secondary-color !important;
+          border-color:$secondary-color !important;
+          background-color: transparent !important;
+          &:hover, &:active, &:focus{
+            background: none !important;
+            color: $white !important;
+            border-color:$secondary-color !important;
+            background-color: $secondary-color !important;
+          
+          }
+          &.current{
+            background: none !important;
+            color: $white !important;
+            border-color:$secondary-color !important;
+            background-color: $secondary-color !important;
+            &:hover{
+              color: $white !important;
+              border-color:$secondary-color !important;
+              background-color: $secondary-color !important;
+            }
+          }
+          &.disabled{
+            opacity: 0.5;
+            pointer-events: none;
+          }
+        }
+      }
+      table{
+        background-color: $white;
+        td, th {
+          vertical-align: middle;
+          border-top: 1px solid $gray-3;
+          padding: 8px 10px;
+        }
+        thead th {
+          vertical-align: bottom;
+          border-bottom: 2px solid $gray-3;
+          text-align: left;
+          border-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.pro_rate_cal_shortcode_main{
+  .pro_rate_cal_pricing{
+    margin-top: 15px;
+    @media (max-width: 575px){
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .pricing_table{
+        thead{
+          > tr{
+            th{
+              &:first-child{
+                width: 50%;
+                @media (max-width: 575px){
+                  min-width: 100px;
+                }
+              }
+              &:last-child{
+                width: 50%;
+              }
+            }
+          }
+        }
+    }
+  }
+}

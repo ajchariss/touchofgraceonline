@@ -1,0 +1,179 @@
+.pro_rate_cal_shortcode_main{
+    .pro_rate_cal_progress_bar_main{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 50px 0 30px;
+        @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            @media (max-width:575px){
+                margin: 20px 0 10px;
+            }
+        }
+        @media (max-width:767px){
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .pro_rate_cal_progress_bar_block_main{
+        //  position: fixed;
+            transition: all .2s;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            text-align: center;
+            flex: 1;
+           // z-index: 1000;
+            bottom: 35px;
+            color: $secondary-color;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+                order: 3;
+                flex-wrap: wrap;
+                @media (max-width:575px){
+                    padding-top:0;
+                }
+            }
+            @media (max-width:767px){
+                flex: 0 0 100%;
+                width: 100%;
+                padding-top: 15px;
+                order: 3;
+            }
+        }
+        .pro_rate_cal_progress_bar_block {
+            height: 20px;
+            /* margin-bottom: 20px; */
+            margin: 0 auto;
+            flex: 1;
+            overflow: hidden;
+            background-color: $gray-2;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 2px rgba($black, 0.10);
+            box-sizing: border-box;
+            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+                order: 3;
+                height: 5px;
+            }
+        }
+        .pro_rate_cal_progress_bar{
+            float: left;
+            width: 0;
+            height: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            color: $white;
+            text-align: center;
+            background-color: $secondary-color;
+            box-shadow: inset 0 -1px 0 rgba($black, 0.15);
+            -webkit-transition: width .6s ease;
+            -o-transition: width .6s ease;
+            transition: width .6s ease;
+            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                background-color: $primary-color-main;
+            }
+        }
+        .pro_rate_cal_progress_bar_count{
+            color: $secondary-color;
+            font-size: 12px;
+            line-height: 1;
+            margin-left: 10px;
+            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                flex: 0 0 100%;
+                width: 100%;
+                order: 1;
+                margin-left: 0;
+                text-align: right;
+                margin-bottom: 10px;
+            }
+        }
+        .rate_cal_link_button{
+            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                font-weight: 400;
+                padding: 7px 20px;
+                position: relative;
+                border-radius: 6px;
+                font-size: 14px;
+                line-height: 14px;
+                border: 1px solid transparent;
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                transition: all .4s ease-in-out;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-family: $primary-font;
+                cursor: pointer;
+                -webkit-appearance: none;
+                color: $white !important;
+                border-color: $primary-color-main;
+                background-color: $primary-color-main;
+                box-shadow: none;
+                outline: 0;
+                @media (max-width: 450px){
+                    padding: 7px 10px;
+                }
+                &:hover, &:focus, &:active{
+                    color: $white !important;
+                    border-color: $secondary-color;
+                    background-color: $secondary-color;
+                    box-shadow: none;
+                    outline: 0;
+                    text-decoration: none;
+                }
+                svg, img, i{
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: $white !important;
+                }
+                svg{
+                    fill: $white !important;
+                }
+            }
+        }
+        .pro_rate_cal_step_prev_btn_block{
+            margin-right: 20px;
+            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                margin-right: 0;
+                margin-bottom: 20px;
+                order: 1;
+                ~ .pro_rate_cal_step_next_btn_block{
+                    margin-left: 20px;
+                    @media (max-width: 450px){
+                        margin-left: 7px;
+                    }
+                }
+            }
+            @media (max-width:767px){
+                float: left;
+            }
+        }
+        .pro_rate_cal_step_next_btn_block{
+            margin-left: 20px;
+            @at-root .fancy-layout.pro_rate_cal_body_step_view &{
+                margin-left: 0;
+                order: 2;
+                margin-bottom: 20px;
+                .rate_cal_link_button{
+                    min-width: 127px;
+                    @media (max-width: 450px){
+                        min-width: unset;
+                    }
+                }
+            }
+            @media (max-width:767px){
+                margin-left: 0;
+            }
+        }
+    }
+}

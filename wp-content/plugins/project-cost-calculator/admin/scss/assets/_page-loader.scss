@@ -1,0 +1,38 @@
+/* Page loader */
+.pro_rate_cal_loader_backdrop{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-self: center;
+  background-color: rgba($black, 0.6);
+}
+.pro_rate_cal_loader_backdrop.pro_rate_cal_loader_backdrop_show {
+  display: flex;
+}
+.pro_rate_cal_loader {
+  border: 4px solid $gray-3;
+  border-radius: 50%;
+  border-top: 4px solid $primary-color;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: pro_rate_cal_loader_spin 2s linear infinite; /* Safari */
+  animation: pro_rate_cal_loader_spin 2s linear infinite;
+  margin: 0 auto;
+  
+}
+
+
+/* Safari */
+@-webkit-keyframes pro_rate_cal_loader_spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes pro_rate_cal_loader_spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

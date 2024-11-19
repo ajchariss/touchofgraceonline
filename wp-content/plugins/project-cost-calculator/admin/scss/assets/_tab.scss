@@ -1,0 +1,44 @@
+/* Style the tab */
+.pro_rate_cal_main_section{
+  .pro_rate-cal_panel_tab{
+      margin-bottom: 15px;
+      .pro_rate-cal_tab_nav{
+        ul{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            background-color: $gray-1;
+            border: 1px solid $gray-3;
+            border-bottom: 0;
+            border-radius: 4px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            li{
+                padding: 12px 30px;
+                font-size: 13px;
+                line-height: 1.5;
+                cursor: pointer;
+                font-weight: 400;
+                position: relative;
+                margin: 0;
+                transition: all .3s ease-out;
+                &.active {
+                    color: $primary-color-main;
+                }
+            }
+        }
+    }
+    .pro_rate-cal_tab-cantent-main {
+        border: 1px solid $gray-3;
+        border-top: 0;
+        padding: 20px 20px 15px;
+        border-radius: 4px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        @media (max-width: 575px){
+          padding: 15px;
+        }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.pro_rate_cal_main_section{
+  .pro_rate_cal_heading {
+    background-color: $white;
+    box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+    border-radius: 0;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1000;
+    .pro_rate-cal_box{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1{
+        margin: 0;
+        color: $white;
+      }
+    }
+  }
+  .pro_rate-cal_logo{
+    @media (max-width: 1199px){
+      img{
+        height: 40px;
+      }
+    }
+  }
+  .pro_rate-cal_header_menu{
+    display: flex;
+    align-items: center;
+    ul{
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      display: none;
+      margin-left: 20px;
+      @media (max-width: 1199px){
+        display: flex;
+      }
+      li{
+        padding: 0 10px;
+        margin: 0;
+        &:first-child{
+          padding-left: 0;
+        }
+        &:last-child{
+          padding-right: 0;
+        }
+        .pro_rate-cal_mobile_menu_toggle{
+          display: block;
+          cursor: pointer;
+          svg{
+            g{
+              fill: $primary-color;
+              text, rect{
+                fill: $primary-color;
+              }
+            }
+          }
+          &:hover{
+            svg{
+              g{
+                fill: $primary-color-main;
+                text, rect{
+                  fill: $primary-color-main;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .how-to-use-btn{
+      @media (max-width: 575px){
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 1199px){
+    .pro_rate-cal_screen_overlay{
+      width: 0%;
+      height: 100%;
+      z-index: 30;
+      position: fixed;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      background-color: rgba(34, 34, 34, 0.6);
+      -webkit-transition: opacity 0.2s linear, visibility 0.1s, width 1s ease-in;
+      transition: opacity 0.2s linear, visibility 0.1s, width 1s ease-in;
+      &.show{
+        -webkit-transition: opacity 0.5s ease, width 0s;
+        transition: opacity 0.5s ease, width 0s;
+        opacity: 1;
+        width: 100%;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px){
+  .offcanvas-active{
+    overflow-y: hidden !important;
+  }
+}
